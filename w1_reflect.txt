@@ -1,0 +1,21 @@
+###########################################################################
+
+                              Reflection
+                             Workshop - #1
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+Email      : dhsborna@myseneca.ca
+Section    : NEE
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+###########################################################################
+
+1. Answer: I don't have any previous programming experience. I think C language is a foundational and widely-used programming language, though it lacks some of the modern features found in newer languages. It's known for its simplicity, efficiency, and low-level system programming capabilities. I think, I will learn to use it for developing operating systems, embedded systems, and performance-critical applications.
+
+2. Answer: A preprocessor handles tasks like including header files and macro expansion, and the compiler translates the preprocessed code into assembly language. Then, the assembler converts the assembly code into machine code, which consists of binary instructions that can be executed by a computer's processor. Finally, the linker combines the machine code with any necessary libraries to create the final executable program. This process transforms human-readable C code into a format that a computer can directly execute.
+
+3. Answer: I hope the skills obtained through this course will help me to develop resilient and high-performing C-based software applications. My goals for the C programming course are to gain a solid understanding of the language's fundamentals, including syntax, data structures, and memory management. I expect to develop proficiency in writing efficient and error-free C code and to be able to apply this knowledge to solve real-world programming challenges.

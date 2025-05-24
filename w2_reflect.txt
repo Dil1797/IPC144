@@ -1,0 +1,35 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+Email      : dhsborna@myseneca.ca
+Section    : NEE
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1. the price1 and the corresponding converted cent value does not properly represent the intended value due to the limited precision of the float data type because the float data type has limited precision (typically 7 decimal places), which can cause rounding errors. In this case, price1 is initialized as 17.96f, but when it was converted  to cents using (int)(price1 * 100), the result is 1795 instead of the expected 1796. This discrepancy is because the float representation cannot precisely store the value 17.96, leading to a small rounding error.
+  In price2 and price4 double data types was used, which work as expected because double has higher precision (typically 15-16 decimal places). So, when it was converted to price2 and price4 to cents using (int)(price2 * 100) and (int)(price4 * 100), respectively, the correct results is 1796 and 1798.
+
+Answer 2.  i. money / 100.0 performs an implicit type cast where money (an int) is promoted to a double, and the division is performed using floating-point arithmetic. This ensures that the result is a double with the correct value. No truncation or rounding occurs.
+
+   ii. money / (double)100 explicitly casts the divisor 100 to a double, so the division is also involves a double (money is implicitly promoted to a double, using floating-point arithmetic) and results in a double.
+
+   iii. (double)money / 100 explicitly casts money to a double before dividing by 100. This also ensures that the division is done with floating-point arithmetic (explicit type casting), resulting in a double value.
+
+Answer 3. a) The value of the variable result is 72. This is because money / 100 performs integer division, which truncates the decimal part of the result. So, 7245 / 100 results in 72.
+
+    b) Sample 1: 1. $72.00 - This works because money / 100 is implicitly cast to a double during the printf formatting.
+
+       Sample 2: 2. $72 - This also works because money / 100 is implicitly cast to an int during the printf formatting.
+
+       Sample 3: 3. $72.00 - This works because result is explicitly cast to a double during the printf formatting.
+
+       Sample 4: 4. $72 - This works because result is an int, and it's displayed as such without any casting.
+
+   c) The printf function handles the formatting of values based on the format specifier used in the format string. In samples 1 and 3, the %lf format specifier is used, indicating that the argument should be treated as a double. As a result, the int value result is implicitly cast to a double during formatting, causing it to display with decimal places.
