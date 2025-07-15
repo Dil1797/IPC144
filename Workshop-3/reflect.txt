@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+Email      : dhsborna@myseneca.ca
+Section    : NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1. I have created 9 variables (selecting the appropriate data type and self-describing names), these are for products inormation user input and 3 customer's preferences, these three types are coffee products and determining customer preferences based on various conditions. This organization helps in understanding the purpose and scope of each variable, making the code more modular and easier to debug or modify in the future. It also enhances collaboration. The two ways to organize the variables to optimize the code maintenance and improve the clarity in how data is stored in the program are:
+ 1) The grouping of variables by type .
+ 2) The grouping of variables by their purpose.
+
+Answer 2. Calculation for the display of the product data in a tabular format. Specifically, the expressions involving coffeeType1, coffeeType2, and coffeeType3:
+
+printf(" 1 |   %d   |   %d    |   %d   | %4d | %6.3lf |   %d   |\n",
+   coffeeType1 == 'l', 
+   coffeeType1 == 'm', 
+   coffeeType1 == 'R', 
+   weight1, 
+   (double)weight1 / GRAMS_IN_LBS, 
+   withCream1 == 'y');
+   
+Here, the expressions (coffeeType1 == 'l'), (coffeeType1 == 'm'), and (coffeeType1 == 'R') are relational expressions. They check if coffeeType1 is equal to 'l', 'm', or 'R', respectively, and evaluate to either true (1) or false (0). These values are then used in the printf statement.
+
+The logical expression (withCream1 == 'y') checks if withCream1 is equal to 'y', and it also evaluates to true (1) or false (0). The logical expressions help in determining whether to print '1' or '0' in the table, indicating the presence or absence of certain characteristics in the coffee product.
+
+Answer 3. DeMorgan's Law is a set of rules that describe the negation of logical expressions involving conjunctions (AND) and disjunctions (OR).
+In my code the part is -
+(coffeeStrength == 'R' && coffeeType2 == 'r'),
+(dailyServings >= 5 && dailyServings <= 9),
+coffeeWithCream == withCream3
+
+Applying DeMorgan's Law to the second part, we can distribute the negation:
+!(dailyServings >= 5 && dailyServings <= 9)
+This can be further simplified using DeMorgan's Law:
+dailyServings < 5 || dailyServings > 9
