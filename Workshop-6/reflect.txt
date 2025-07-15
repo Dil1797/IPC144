@@ -1,0 +1,39 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #6
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1: Arrays that are arranged with different arrays holding different data types for corresponding elements are often referred to as "parallel arrays" or "arrays of structures." In this code, I have three parallel arrays: itemCost (double), itemPriority (int), and financeOption (char). This arrangement is useful when you want to associate multiple attributes or properties with a single entity. It allows to maintain a clear relationship between different aspects of the data for each wish list item.
+
+
+Answer 2: I have primarily used the for loop, which is a convenient and concise way to iterate over arrays. Here's an example of using a while loop instead of the for loop for printing the formatted table of the data:
+
+int i = 0;
+while (i < wishList)
+{
+    printf("%3d  %5d    %5c    %11.2lf\n", i + 1, itemPriority[i], financeOption[i], itemCost[i]);
+    i++;
+}
+The while loop achieves the same result, incrementing i within the loop, iterating through the array until i reaches wishList.
+
+Answer 3:
+  i. Testing: I have ensured valid inputs for monthly income, wish list items, item cost, item priority, and financing options. Checked the program's response to invalid inputs, such as income below the minimum, above the maximum, or out-of-range priorities.
+  
+  ii. Debugging: I have reviewed error messages and identified issues related to incorrect inputs. Checked the logic flow and ensured that variables were initialized and used correctly. Addressed syntax errors, such as missing semicolons, and adjusted logical conditions where necessary.
+
+
+
+
+
+
+
+
+
+
