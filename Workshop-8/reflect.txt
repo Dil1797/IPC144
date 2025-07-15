@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1. In the convertLbsKg function, the result is returned in two different ways:
+Assigning the result to the second pointer argument (only if it is NOT NULL):
+This method allows the function to store the converted value directly into a variable whose address is passed as an argument. If the pointer resultInKg is not NULL, it means the caller wants to receive the result through this pointer. In that case, the converted value is assigned to the memory location pointed to by resultInKg.
+
+Returning the result:
+To assigning the result to the pointer argument, the function also returns the converted value using the return statement. This allows the caller to capture the result directly through the function's return value.
+
+Revising the function to split it into two separate functions:
+// Function prototype for converting pounds to kilograms and assigning the result to a pointer
+void convertLbsKg_assign(const double* lbs, double* resultInKg);
+
+// Function prototype for converting pounds to kilograms and returning the result
+double convertLbsKg_return(const double* lbs);
+
+Answer 2. Highly cohesion:
+A highly cohesive module performs a single task and only that task. Most of the functions in this code performs a single, well-defined task. Such as- getIntPositive gets and validates positive integer input. getDoublePositive gets and validates positive double input. openingMessage displays the opening message. They are not related to any other functions and do only one task.
+
+Loosely Coupled:
+Loosely Coupled describes the less interrelatedness of a module with other modules.  The start() function does not directly interact with the individual functions responsible for specific tasks such as input validation, data conversion, or report generation. The start() function communicates with these functions without needing to know their internal implementations. Changes to the implementation of these individual functions can be made independently without affecting the overall structure of the start() function. Thats why start() is an example of loosely coupled.
+
+Answer 3. Using header files along with source code files is an useful approach for managing the development of applications. It promotes modularity as each header file encapsulates related declarations such as structures (CatFoodInfo and ReportData) and function prototypes for example, the getIntPositive() function prototype in the header file matches the function definition in the source code file, providing a clear interface for getting a positive integer input. For various functionalities related to the cat food cost analysis application and prototypes, making it easier to understand and maintain. This promotes information hiding and reduces dependencies between modules. Also the functions and data structures defined once in a header file can be included in multiple source code files. This promotes code reusability and avoids duplicating code in the same project. By reading the header file, developers can quickly understand the functions and data structures provided by the module without the implementation details.
+ 
+
+
+
+
