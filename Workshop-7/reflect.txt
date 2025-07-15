@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #7
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1: Impact of not using structures:
+
+Without structures, I would need to manage the data for PlayerInfo and GameInfo using individual variables. Here's the revised code for the variable declaration section:
+
+int playerLives;
+char playerSymbol;
+int playerTreasuresFound;
+int playerHistory[MAXIMUM_PATH_LENGTH];  // Array to store history
+
+int pathLength;
+int numMovesAllowed;
+int bombs[MAXIMUM_PATH_LENGTH];
+int treasures[MAXIMUM_PATH_LENGTH];
+
+This approach makes the code less organized and harder to maintain. Structures provide a way to group related data and functions, improving readability and code reusability.
+
+Answer 2: The parallel arrays in the code are:
+bombs: Stores the information about bomb locations (1 for bomb, 0 for no bomb).
+treasures: Stores the information about treasure locations (1 for treasure, 0 for no treasure).
+These arrays have the same size as pathLength and correspond to each other. By indexing them together (e.g., bombs[move - 1] and treasures[move - 1]), it was easy to determine if a player encountered a bomb, treasure, or neither at a specific location during their move.
+
+Answer 3: Deepest Nested Statement:
+
+if (isRepeated == 0) {
+  // storing moves history_index into array
+  player.history[history_index] = move;
+  history_index++;
+  if (game.bombs[move - 1] == 1 && game.treasure[move - 1] == 0) {
+    printf("===============> [!] !!! BOOOOOM !!! [!]\n\n");
+    sign[move - 1] = '!';
+    player.numLives--;
+    game.numMoves--;
+  }
+}
+
+This logic checks if the player's move is not repeated. If not, it updates the history, then checks the corresponding positions in the bombs and treasures arrays to determine what the player encountered (bomb, treasure, both, or neither). It then updates the player's lives, treasures found, remaining moves, and the sign array to reflect the outcome of the move.
