@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1) I made my code more organised by using iteration and selection logic, this helped enhance the ability to read and the overall manintenance of the code.
+In the iteration logic each mentioned item has its own 'while' loop for picking the items, by doing this loop it seperates the logic for each individual item  which in the end makes it easier to understand and modify. The loop also clearly defines the conditions such as 'while(apples > 0)' or 'while (oranges > 0)' etc , this declares the condition so the loop can be continued
+In the selection logic I have used the 'if-else ' statements within the loops and they help in handling the  scenarios mentioned by the input and the specif requirements of each item.The conditions in the statement are clear and understandable i.e 'if (picked <= 0) checks if the user has picked at least one item and if the other condition verifies if the user has picked more items than required. Each if-else branch has own set of instructions that clearly indicate the outcome of the selection which in the end improves the codes readability and makes it easier to follow the flow.
+
+Answer  2) If there was no nesting possible the code would undergo changes and would've faced challenges , some impacts are ;
+*increased code complexity because without the ability to nest logic the code would become more complex and the absence of nested logic would require alot of if-else statements and be a repetitve code which would make the code harder to read and understand.
+*Nesting also provides a ay of having and following a logic and without nesting it would be hard to organize the code. The absence of nested logic would result in a less structured code making it harder to modify the code.
+*No nesting logic would reduce the readability of the code which would also increase the difficulty of understanding the flow.
+*Nesting is the reason for complex conditional expressions , it combines the conditions by using logical operators. Without nesting the code would be limited to simples expressions which makes it harder to handes.
+*The absence of nesting would also increase the code length , which means longer code making it harder to go throught the code and to maintaiin it.
+ 
+Answer 3)  It is inefficient to achieve this because using the series "if"  instead of "if/else if" giving another path logic and this will be inefficient because there will be incomplete selections when using the "if" statements which can lead to unexpected or incorrect behaviour.
+*A series of 'if' statements without the 'else if' can lead the code to become harder to read and understand and therefore making it harder to maintain .
+*Due to lack of exclusion in the 'if' statements the condntions are evaluated even if the other condition is true which impacts the perfomances
+*readability : the 'if/else if' path logic provides a clear and proper way to handle conditions . Improves the codes readability and maintainability as it clearly communicates the proper logic flow also makes it easier to add or modify the code .
+The 'if/else if' statements are an efficient approach to handle and deal with multiples conditions.
