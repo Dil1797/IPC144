@@ -1,0 +1,26 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1: I have used a while loop to validate the rating values entered by the user, not a for loop. The while loop is more suitable in this case because it allows continuous prompting for valid input until the user enters a correct rating within the specified range (0.0-5.0). A for loop is generally used when the number of iterations is known beforehand, and it iterates a specific number of times, making it less suitable for continuous input validation.
+
+Answer 2: I have used a switch statement to print the month based on the integer value stored in the variable month. The switch statement is suitable for this scenario because it allows for a concise and clear mapping of integer values to corresponding month names. Each case corresponds to a different month, making the code more readable and maintaining a logical structure. Using a series of if statements would also be possible, but a switch statement is generally preferred for this type of situation where there are multiple fixed cases.
+
+Answer 3: Three advantages:
+i. Readability and Maintainability:
+Using variables and macros enhances code readability and maintainability. Variables and macros give clear context to values, making it easier for developers to understand their purpose. Hardcoding "magic" numbers can obscure the meaning of values, while variables provide a clear representation in the code.
+
+ii. Flexibility and Adaptability:
+Variables and macros offer flexibility by allowing easy changes in one place, propagating throughout the code. Changes to parameters or constants, such as the number of days for data collection, can be efficiently managed through a single update in the macro definition. This adaptability reduces the risk of errors and simplifies the process of adjusting program parameters.
+
+iii. Avoiding Magic Numbers:
+Variables and macros help avoid the use of "magic" numbers, improving code maintainability.
+Magic numbers lack context and can lead to errors when modified in multiple locations. Meaningful names for variables and macros provide clarity and prevent unintentional mistakes associated with altering hardcoded constants.
