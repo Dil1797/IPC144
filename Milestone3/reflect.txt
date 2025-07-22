@@ -1,0 +1,81 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+Full Name  : Dil Humyra Sultana Borna
+Student ID#: 139166227
+Email      : dhsborna@myseneca.ca
+Section    : NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+Answer 1: In MS1 of the project, I have used manual string manipulation in many places. Here are two examples where I've replaced custom code with functions from the string library:
+
+Code Snippet 1: Manual String Copy Replaced with strcpy
+
+for (i = 0; i < strlen(name) - 1; i++) {
+  patient->name[i] = name[i];
+}
+
+This code iterates through a character array and copies characters from name to patient->name. I have replaced this with a single line using strcpy from the string library:
+
+strcpy(patient->name, name);
+
+Benefits:
+strcpy clearly conveys the purpose of copying a string, making code easier to understand. It reduces lines of code, improving maintainability. String library functions are often optimized for performance. While not guaranteed, strcpy might be faster than a custom loop, especially on larger strings. Manual string copying can lead to off-by-one errors or buffer overflows if not handled carefully. strcpy handles these aspects internally, minimizing the chance of such errors.
+
+Code Snippet 2: Manual String Comparison Replaced with strcmp
+
+if (strcmp(patient[i].phone.number, phoneNum) == 0) {
+  // Found a match
+}
+
+This code compares two strings character by character. I have achieved the same functionality with strcmp from the string library:
+
+if (strcmp(patient[i].phone.number, phoneNum) == 0) {
+  // Found a match
+}
+
+Benefits:
+strcmp adheres to the C standard, ensuring consistent behavior across different platforms and compilers. This avoids compatibility issues. strcmp clearly indicates a string comparison, making code more self-explanatory for other developers. strcmp handles edge cases like null pointers gracefully. This reduces the risk of unexpected behavior compared to manual string comparison.
+
+Using well-tested and optimized string library functions like strcpy and strcmp, enhanced code readability, reduced the chance of errors, and potentially improved performance. This promotes code maintainability and consistency across the project.
+
+Answer 2: The two string copying functions are strcpy() and strncpy().
+
+strcpy(): Copies the entire source string to the destination string, including the null terminator. It doesn't ensure that the destination buffer has enough space, potentially leading to buffer overflows.
+
+strncpy(): Copies up to a specified number of characters from the source string to the destination string. It stops copying if it encounters the null terminator or reaches the specified number of characters, making it safer than strcpy().
+
+strncpy() is generally preferred over strcpy() due to its buffer overflow prevention capabilities.
+
+The line of code where I should have applied strncpy() is:
+
+// In MS2, file clinic.c, within the inputPhoneData function:
+
+strncpy(phone->description, "CELL", PHONE_DESC_LEN);
+
+Explanation of how strncpy() works in this context:
+
+Destination: phone->description is the character array where the copied string will be stored. "CELL" is the string to be copied. PHONE_DESC_LEN specifies the maximum number of characters to copy, ensuring that the copying does not exceed the capacity of the destination array, preventing potential buffer overflows.
+
+If "CELL" is less than or equal to PHONE_DESC_LEN characters long (including the null terminator), strncpy() copies the entire string and appends a null terminator to the destination array.
+If "CELL" is longer than PHONE_DESC_LEN characters, strncpy() copies only PHONE_DESC_LEN-1 characters and doesn't append a null terminator. In this case, it's essential to manually add a null terminator to the destination array to ensure it's a valid string.
+
+By using strncpy() with a specified maximum length, we promote safer string handling practices and mitigate potential buffer overflow vulnerabilities.
+
+Answer 3: The list of appointments are always listed in an ascending order based on the
+appointment’s date/time. Here I have explained the logic that I have applied to keep the list of appointments in the correct order regardless of any changes.
+
+void sortAppointment(struct Appointment appoint[], int len);
+This is the most complicated and important function which we needed to create on our own in this milestone. Its purpose is to sort the appointments in ascending order, taking in consideration: year, month, day, hour and minutes of each scheduled appointment provided or added in the system. It also makes the code more modular, thus saving us the complexity while both displaying the already-present appointments in the database and every time a new appointment is added. The value this function adds is that it requires us to learn and implement a sorting algorithm (like insertion sort, bubble sort, etc.). My function uses the technique of bubble sort and compares each component of appointment one-by-one, starting from the year to all the way to minutes. Therefore, we may call it the waterfall model for approaching a problem, as we move from the bigger quantity to the smaller quantity step-by-step.
+ 
+int freeSlot(struct Time baseTime, struct Time appointTime);
+This function plays a key role in determining if the time slot wished for by the user is available or not. After the necessary mathematical calculations, two boolean variables - isOnInterval and isOverlap check that the appointment DOES fall on the given interval and DOES NOT overlap with any existing appointment. It is used in another self-created function availAppoint, making its design sophisticated, and code - easy to understand and debug.
+
+int isLeapYear(int year);
+This is a basic function by nature but was important to implement inputDate and viewAppointmentSchedule functions because they call another function getMaxDay, where isLeapYear is directly implemented. Moreover, this function is only called when the month value of the date equals to 2 (i.e. for February). We needed to calculate the number of days in February in the two functions mentioned before. Creation of this function made me jog my memory as I had coded it earlier in high school as a part of a basic problem (in Java programming language) and refreshed my logic for the calculation of leap year.
+
+Overall, these functions provide functionalities essential for managing appointments in the system, including sorting for organization, checking availability, and handling leap years for accurate scheduling.
